@@ -77,7 +77,7 @@ console.log('file',file)
     if (formData) {
       try {
         const response = await axios.post(
-          `http://leetreviews.com:8000/42/upload/?id=${id}`,
+          `http://leetreviews.com/42/upload/?id=${id}`,
           formData
         );
 
@@ -146,7 +146,7 @@ console.log('file',file)
           Authorization: `Bearer ${token}`,
         };
         response = await axios.post(
-          `http://leetreviews.com:8000/42/companys/`,
+          `http://leetreviews.com/42/companys/`,
           formDataObject,
           { headers }
         );

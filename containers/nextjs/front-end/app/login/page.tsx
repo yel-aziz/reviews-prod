@@ -34,7 +34,7 @@ export default function Login() {
             Join us now and Share With Us your Experience
           </p>
           <Link
-            href={'http://leetreviews.com:8000/42/oauth'}
+            href={'http://leetreviews.com/42/oauth'}
             className="flex outline-0 items-center hover:shadow-xl hover:bg-[#BE4FC2] px-5 sm:px-10 m-auto bg-[#8196c3] h-[60px]  rounded-[60px] text-dark font-blod w-fit"
           >
             <Image

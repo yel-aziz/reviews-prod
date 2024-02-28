@@ -38,7 +38,7 @@ const token = tokenCookie ? tokenCookie.split('=')[1] : null;
             
           };
           const response = await axios.get(
-            "http://localhost:8000/42/getCompanys",
+            "http://localhost/42/getCompanys",
             { headers }
           );
           setData(response.data);
@@ -78,7 +78,7 @@ const token = tokenCookie ? tokenCookie.split('=')[1] : null;
           
         };
         const response = await axios.get(
-          "http://localhost:8000/42/getCompanys",
+          "http://localhost/42/getCompanys",
           { headers }
         );
         setData(response.data);

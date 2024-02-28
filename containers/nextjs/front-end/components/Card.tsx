@@ -38,17 +38,17 @@ export default function Card({
           Authorization: `Bearer ${token}`,
           // other headers...
         };
-        const user = await axios.get("http://leetreviews.com:8000/42/me", {
+        const user = await axios.get("http://leetreviews.com/42/me", {
           headers,
         });
         setLogin(user.data.login);
         const creatorlogin = await axios.get(
-          `http://leetreviews.com:8000/42/user/?id=${creatorid}`
+          `http://leetreviews.com/42/user/?id=${creatorid}`
         );
         setCreatorlogin(creatorlogin.data.login);
 
         const usercommented = await axios.get(
-          `http://leetreviews.com:8000/42/getComments/?id=${id}`
+          `http://leetreviews.com/42/getComments/?id=${id}`
         );
 
         setAvatarcomment(usercommented.data.comments);
