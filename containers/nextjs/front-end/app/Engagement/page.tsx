@@ -46,9 +46,9 @@ export default function Engagment() {
           Authorization: `Bearer ${token}`,
           // other headers...
         };
-        const user = await axios.get('http://localhost:8000/42/me', { headers })
+        const user = await axios.get('http://leetreviews.com/42/me', { headers })
         setAvatar(user.data.avatar)
-        const url = `http://localhost:8000/42/getComments/?id=${id}`;
+        const url = `http://leetreviews.com/42/getComments/?id=${id}`;
         const response = await axios.get(url);
         setComments(response.data.comments);
         setData(response.data);
@@ -78,13 +78,13 @@ export default function Engagment() {
         // other headers...
       };
 
-      const url = `http://localhost:8000/42/comments/?id=${id}`;
+      const url = `http://leetreviews.com/42/comments/?id=${id}`;
       console.log('comment going', feedback)
       const status = await axios.post(url, { feedback }, { headers });
       //  Refresh comments after posting
 
       const refreshedData = await axios.get(
-        `http://localhost:8000/42/getComments/?id=${id}`
+        `http://leetreviews.com/42/getComments/?id=${id}`
       );
       setComments(refreshedData.data.comments);
       console.log('comments', refreshedData.data)
